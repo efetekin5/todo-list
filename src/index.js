@@ -9,9 +9,20 @@ let projects = JSON.parse(localStorage.getItem("projects")) || [];
 let currentProject =
   JSON.parse(localStorage.getItem("currentProject")) ||
   createProject("currentProject", 0);
-console.log(projects);
 
 let i = 0;
+
+if(projects.length == 0) {
+
+  let testProject = {
+    name: 'Test Project',
+    todos: [],
+    id: 0,
+  };
+
+  projects.push(testProject);
+  localStorage.setItem('projects', JSON.stringify(projects));
+}
 
 projects.forEach((project) => {
   project.id = i;
@@ -24,7 +35,6 @@ let projectButton = document.querySelector("#projectButton");
 projectButton.addEventListener("click", () => {
   if (document.querySelector("#newProject").value != "") {
     let projectName = document.querySelector("#newProject");
-    console.log(i);
     let project = createProjectDiv(projectName.value, i);
     projects.push(project);
     localStorage.setItem("projects", JSON.stringify(projects));
