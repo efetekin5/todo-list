@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        TODO LIST
+    </div>
+
+    <div class="main">
+        <div class="projects">
+            <div class="createProjects">
+                <form class="buttonAndInput" action="">
+                    <input type="text" id="newProject" placeholder="New Project" required>
+                    <button id="projectButton" type="button">Create</button>
+                </form>
+
+                <div class="allProjects">
+                    
+                </div>
+            </div>
+
+            <div class="displayTodos">
+                <form class="todoForm" action="">
+                    <input type="text" placeholder="New task" id="newTask" required>
+                    <input type="date" id="date" required>
+                    <select id="urgency" required>
+                        <option value="urgent">Urgent</option>
+                        <option value="nonurgent">Nonurgent</option>
+                    </select>
+                    <button type="button" id="todoButton">Create</button>
+                </form>
+
+                <div class="allTodos">
+                    <div class="task">
+                        <input type="checkbox" id="checkBox">
+                        <span id="taskName">task name</span>
+                        <span id="taskDate">Date</span>
+                        <div id="taskUrgency">Urgency</div>
+                        <img src="edit.png" alt="removeIcon" id="taskIcon">
+                        <img src="remove.png" alt="removeIcon" id="taskIcon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

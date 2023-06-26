@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*website name*/
+.header {
+    width: 100vw;
+    height: 100px;
+    background-color: lightskyblue;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    color: white;
+    padding-left: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*website content*/
+.main {
+    width: 100vw;
+    height: 87vh;
+    background-color: white;
+    border-radius: 20px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+    column-gap: 30px;
+    padding-right: 50px;
+}
+
+/*creating the projects*/
+.createProjects {
+    height: 600px;
+    width: 600px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.buttonAndInput {
+    width: 500px;
+    height: 10px;
+    display: flex;
+    column-gap: 20px;
+    padding-left: 50px;
+    margin-bottom: 100px;
+}
+
+#newProject {
+    height: 60px;
+    width: 300px;
+    border-bottom: 3px solid lightskyblue;
+    font-size: 30px;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+#projectButton {
+    height: 60px;
+    width: 130px;
+    border-radius: 10px;
+    background-color: lightskyblue;
+    color: white;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*displaying all the projects*/
+.allProjects {
+    width: 500px;
+    height: 500px;
+    margin-left: 50px;
+    box-shadow: 0px 0px 6px lightskyblue;
+    border-radius: 10px;
+    padding-left: 50px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    row-gap: 20px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+.addedProject {
+    width: 400px;
+    height: 50px;
+    background-color: #f3f4f6;
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+span {
+    width: 2000px;
+    overflow: auto;
+    font-size: 25px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+#removeIcon {
+    padding-left: 50px;
+    height: 40px;
+}
+
+/*todos*/
+.displayTodos {
+    height: 600px;
+    width: 1100px;
+    margin-bottom: 1px;
+    box-shadow: 0px 0px 6px lightskyblue;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    row-gap: 20px;
+}
+
+.allTodos {
+    height: 600px;
+    width: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    overflow: auto;
+    padding-bottom: 20px;
+}
+
+/*creating todos*/
+.todoForm {
+    width: 1000px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+}
+
+#editTodoName,
+#newTask {
+    width: 500px;
+    height: 50px;
+    border-bottom: 3px solid lightskyblue;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#editTodoDate,
+#date {
+    width: 550px;
+    height: 50px;
+    border-bottom: 3px solid lightskyblue;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#editTodoUrgency,
+#urgency {
+    width: 500px;
+    height: 50px;
+    border-bottom: 3px solid lightskyblue;
+    font-size: 20px;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#todoButton {
+    height: 50px;
+    width: 400px;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*displaing todos*/
+.task {
+    display: flex;
+    width: 1000px;
+    height: 80px;
+    align-items: center;
+    column-gap: 50px;
+    background-color: #f3f4f6;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#checkBox {
+    height: 20px;
+    width: 20px;
+}
+
+#taskName {
+    height: 40px;
+    width: 500px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#editTaskDate,
+#taskDate {
+    height: 50px;
+    width: 150px;
+    font-size: 22px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#editTaskUrgency,
+#taskUrgency {
+    height: 25px;
+    width: 80px;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.projectFocused {
+    width: 400px;
+    height: 50px;
+    background-color: #140c10;
+    color: lightskyblue;
+    display: flex;
+    padding: 15px;
+    border-radius: 10px;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 25px;
+}
+
+/*editTodo*/
+
+.editTodo {
+    position: absolute;
+    display: flex;
+    width: 1000px;
+    height: 150px;
+    align-items: center;
+    column-gap: 50px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    left: 440px;
+    top: 270px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay color */
+}
+
+#editButton {
+    height: 50px;
+    width: 500px;
+    background-color: lightskyblue;
+    color: white;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#testRemoveIcon {
+    padding-left: 50px;
+    height: 40px;
+}
