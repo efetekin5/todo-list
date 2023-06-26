@@ -1,29 +1,25 @@
 import { getCurrentProject, getProjects } from ".";
-import projectSelection from "./projectSelection";
+import selectProject from "./selectProject";
 import { updateProjects } from ".";
 import { createProjectDiv } from "./createProjectDiv";
 
 export default function deleteProject(id) {
 
-    console.log(id);
-    let allProjects = getProjects();
-    console.log(allProjects);
-    let deletedProject = allProjects.findIndex(project => project.id == id);
-    allProjects.splice(deletedProject, 1);
+  let allProjects = getProjects();
 
-    updateProjects(allProjects);    
-    let currentProject = getCurrentProject();
+  let projectIndex = allProjects.findIndex((project) => project.id == id);
+  allProjects.splice(projectIndex, 1);
 
+  updateProjects(allProjects);
 
-    let projectDiv = document.querySelector('.allProjects');
-    projectDiv.innerHTML = '';
-    let i = 0;
-    allProjects.forEach(project => {
-        createProjectDiv(project.name, i);
-        i++;
-    });
+  let projectDiv = document.querySelector(".allProjects");
+  projectDiv.innerHTML = "";
+  
+  let i = 0;
+  allProjects.forEach((project) => {
+    createProjectDiv(project.name, i);
+    i++;
+  });
 
-    
-    localStorage.setItem('projects', JSON.stringify(allProjects));
-
+  localStorage.setItem("projects", JSON.stringify(allProjects));
 }
